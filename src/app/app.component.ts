@@ -10,7 +10,8 @@ import { Component } from '@angular/core';
   <button (click)="changeColor()">click me</button><br>
   <input [(ngModel)]="text"><br>
   <input bindon-ngModel="text"><br>
-  <input [value]="text" (input)="text=$event.target.valu
+  <input [value]="text" 
+  (input)="text=$event.target.value">
   <h1>{{text}}</h1>
   `
 })
