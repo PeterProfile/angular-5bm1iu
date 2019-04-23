@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
   <div [style.color]="twoColors? 'blue':'forestgreen'">
   what color am I
   </div>
-  <button (click)="changeColor()">click me</button>
+  <button (click)="changeColor()">click me</button><br>
+  <input [(ngModel)]="text"><br>
+  <input bindon-ngModel="text"><br>
+  <input [value]="text" (input)="text=$event.target.valu
+  <h1>{{text}}</h1>
   `
 })
 export class AppComponent  {
@@ -16,4 +20,5 @@ export class AppComponent  {
   changeColor= function(){
     this.twoColors = !this.twoColors;
   }
+  text: string="some text here";
 }
